@@ -7,7 +7,7 @@ import { Book } from '../models/book';
   providedIn: 'root'
 })
 export class BookService {
-  private baseUrl: string = "http://localhost:8080/api/v1";
+  private baseUrl: string = "http://localhost:8090/api/v1";
   constructor(private http:HttpClient) {}
 
 
@@ -15,6 +15,11 @@ export class BookService {
     
     return this.http.get<Book[]>(`${this.baseUrl}/books`);
   }
-
+  getBookById(id: bigint): Observable<Book>{
+    return this.http.get<Book>(`${this.baseUrl}/books/${id}`);
+  }
+  updateBook(id:bigint, book:Book): Observable <Object> {
+    return this.http.put(`${this.baseUrl}/books/${id}`, book);
+  }
 }
 

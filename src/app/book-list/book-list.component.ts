@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from '../models/book';
 import { BookService } from '../service/book.service';
 
@@ -11,7 +12,7 @@ export class BookListComponent implements OnInit {
 
   book!:Book[];
 
-  constructor(private bookservice:BookService) { }
+  constructor(private bookservice:BookService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -26,6 +27,9 @@ private getBooks(){
       console.log(this.book);
     }
   );
+}
+updateBook(id:bigint){
+this.router.navigate(["update-book", id]); 
 }
 
 }
