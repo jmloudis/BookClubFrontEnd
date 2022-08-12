@@ -1,31 +1,37 @@
 <p>update-book works!{{id}}</p>
-<form >
+<form (ngSubmit)="onSubmit()">
+  <div class="update-form">
     <div class="form-outline">
-        <label class="form-label" for="typeText">Title</label>
+        <label class="form-label" >Title</label>
         <input type="text" id="title" class="form-control" [(ngModel)]="book.title" name="title" />
-      </div>
+    </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">Author</label>
+        <label class="form-label" >Author</label>
         <input type="text" id="author" class="form-control" [(ngModel)]="book.author" name="author"/>
       </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">Genre</label>
+        <label class="form-label" >Genre</label>
         <input type="text" id="genre" class="form-control" [(ngModel)]="book.genre" name="genre" />
       </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">Price</label>
+        <label class="form-label" >Price</label>
         <input type="text" id="price" class="form-control" [(ngModel)]="book.price" name="price"/>
       </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">Total Sales </label>
+        <label class="form-label" >Total Sales </label>
         <input type="text" id="totalSales" class="form-control" [(ngModel)]="book.totalSales" name="totalSales"/>
       </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">Year Published</label>
+        <label class="form-label" >Year Published</label>
         <input type="text" id="yearPublished" class="form-control" [(ngModel)]="book.yearPublished" name="yearPublished" />
       </div>
       <div class="form-outline">
-        <label class="form-label" for="typeText">img Url</label>
+        <label class="form-label" >Image Url</label>
         <input type="text" id="imageUrl" class="form-control" [(ngModel)]="book.imageUrl" name="imageUrl"/>
       </div>
+  <div>
+    <button class="btn btn-success" >Submit</button>
+    <button class="btn btn-danger back-button" (click)="navigateToBookList()" >Back </button>
+  </div>
+  </div>
 </form>

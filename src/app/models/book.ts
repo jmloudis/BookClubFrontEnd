@@ -1,3 +1,5 @@
+import {Club} from "./club";
+
 export class Book{
     author?:string;
     genre?:string;
@@ -7,4 +9,5 @@ export class Book{
     title?:string;
     totalSales!:number;
     yearPublished!:number;
+    clubs!: Club[];
 }
