@@ -8,7 +8,7 @@
         [src]="B.imageUrl"
         alt="Trendy Pants and Shoes"
         class="img-fluid rounded-start"
-        
+
       />
     </div>
     <div class="col-md-8">
@@ -19,11 +19,11 @@
           <li class="list-group-item">Price: {{B.price | currency}}</li>
           <li class="list-group-item">Genre: {{B.genre | titlecase}}</li>
           <li class="list-group-item">Year Published: {{B.yearPublished}}</li>
-          <li class="list-group-item">Total Sales: {{B.totalSales}}</li>
+          <li class="list-group-item">Total Sales: {{B.totalSales | number:"1.0-3"}}</li>
           <div class="d-flex">
-            <button class="btn btn-outline-success mx-auto">View Clubs</button> 
-            <button (click)="updateBook(B.id)" class="btn btn-outline-info mx-auto">Update</button> 
-            <button class="btn btn-outline-danger mx-auto">Delete</button> 
+            <button (click)="viewClubs(B.id)" class="btn btn-outline-success mx-auto">View Clubs</button>
+            <button (click)="updateBook(B.id)" class="btn btn-outline-info mx-auto">Update</button>
+            <button (click)="deleteBook(B.id)" class="btn btn-outline-danger mx-auto">Delete</button>
           </div>
         </ul>
       </div>
