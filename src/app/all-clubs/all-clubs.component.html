@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12" style="max-width: 50%" *ngFor="let C of club">
+    <div class="card mb-3" >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            [src]="B.imageUrl"
+            alt="Trendy Pants and Shoes"
+            class="img-fluid rounded-start"
+    
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <ul class="list-group">
+              <li class="list-group-item"> Author: {{C.name}}</li>
+              <li class="list-group-item">Price: {{C.members}}</li>
+              <li class="list-group-item">Genre: {{C.meetingTime}}</li>
+        
+              <div class="d-flex">
+                
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
