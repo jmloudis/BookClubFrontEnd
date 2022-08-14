@@ -31,4 +31,16 @@ export class ClubListComponent implements OnInit
   onSubmit(id: bigint) {
     this.router.navigate(['update-club', id]);
   }
+  onDelete(id: bigint){
+    this.clubService.deleteClub(id).subscribe(
+      data =>{
+        this.bookservice.getBookById(this.id).subscribe(data =>
+          {
+            this.book= data;
+            console.log(this.book);
+          });
+      }
+    )
+
+  }
 }

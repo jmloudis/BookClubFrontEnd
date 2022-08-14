@@ -17,7 +17,7 @@
     <td>{{c.meetingTime}}</td>
     <td>
       <button (click)="onSubmit(c.id)" class="btn btn-primary">Update</button>
-      <button class="btn btn-danger delete-button">Delete</button>
+      <button (click)="onDelete(c.id)" class="btn btn-danger delete-button">Delete</button>
 
     </td>
   </tr>
