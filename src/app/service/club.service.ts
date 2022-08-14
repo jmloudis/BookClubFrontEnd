@@ -23,5 +23,7 @@ export class ClubService {
   updateClub(id: bigint, bookId: bigint, club: Club): Observable<any> {
     return this.http.put(`${this.baseUrl}/books/${bookId}/clubs/${id}`, club);
   }
-
+  deleteClub(id: bigint): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/clubs/${id}`);
+  }
 }
