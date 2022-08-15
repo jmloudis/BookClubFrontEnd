@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: "clubs/:id", component: ClubListComponent},
   {path: "update-club/:id", component: UpdateClubComponent},
   {path: "", redirectTo: "books", pathMatch: "full"},
-  {path: "All-books",component: AllClubsComponent}
+  {path: "all-clubs",component: AllClubsComponent}
+
 ];
 
 @NgModule({
