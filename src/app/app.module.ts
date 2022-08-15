@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AddBookComponent } from './add-book/add-book.component';
 import { ClubListComponent } from './club-list/club-list.component';
 import { UpdateClubComponent } from './update-club/update-club.component';
+import { AllClubsComponent } from './all-clubs/all-clubs.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateClubComponent } from './update-club/update-club.component';
     UpdateBookComponent,
     AddBookComponent,
     ClubListComponent,
-    UpdateClubComponent
+    UpdateClubComponent,
+    AllClubsComponent
   ],
   imports: [
     BrowserModule,
