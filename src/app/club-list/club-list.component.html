@@ -1,0 +1,27 @@
+
+<h1 *ngIf="book.clubs.length==0" > There are no clubs for {{book.title}}</h1>
+
+<table class="table table-striped" *ngIf="book.clubs.length!=0">
+  <thead>
+  <tr>
+    <th scope="col"> Book </th>
+    <th scope="col">Club Name</th>
+    <th scope="col">Members</th>
+    <th scope="col">Meeting Time</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of book.clubs">
+    <td><img class="book-image" [src]="book.imageUrl" /></td>
+    <td class="align-middle">{{c.name}}</td>
+    <td class="align-middle">{{c.members}}</td>
+    <td class="align-middle" >{{c.meetingTime}}</td>
+    <td class="align-middle">
+      <button (click)="onSubmit(c.id)" class="btn btn-primary">Update</button>
+      <button (click)="onDelete(c.id)" class="btn btn-danger delete-button">Delete</button>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
