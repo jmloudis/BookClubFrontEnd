@@ -1,0 +1,34 @@
+
+<p> Book id is: {{b_id}}</p>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="update-club-form">
+    <div class="form-outline">
+      <label class="form-label" >Club Name</label>
+      <input type="text" id="title" class="form-control" [(ngModel)]="club.name" name="title" />
+    </div>
+    <div class="form-outline">
+      <label class="form-label" >Club Members</label>
+      <input type="text" id="members" class="form-control" [(ngModel)]="club.members" name="members" />
+    </div>
+    <div class="form-outline">
+      <label class="form-label" >Meeting Time</label>
+      <input type="text" id="meetingTime" class="form-control" [(ngModel)]="club.meetingTime" name="meetingTime" />
+    </div>
+
+    <div class="form-outline col-md-4">
+      <label> Choose Book </label>
+      <select class="form-select" name="my-select" [(ngModel)]="b_id" (change)="selectChange()">
+        <option  [value]="item.id" *ngFor="let item of book">
+          {{item.title}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <button class="btn btn-success" >Submit</button>
+      <button class="btn btn-danger back-button"> Back </button>
+    </div>
+  </div>
+</form>
+

@@ -11,6 +11,7 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { ClubListComponent } from './club-list/club-list.component';
 import { UpdateClubComponent } from './update-club/update-club.component';
 import { AllClubsComponent } from './all-clubs/all-clubs.component';
+import { AddClubComponent } from './add-club/add-club.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AllClubsComponent } from './all-clubs/all-clubs.component';
     AddBookComponent,
     ClubListComponent,
     UpdateClubComponent,
-    AllClubsComponent
+    AllClubsComponent,
+    AddClubComponent
   ],
   imports: [
     BrowserModule,

@@ -26,4 +26,7 @@ export class ClubService {
   deleteClub(id: bigint): Observable<any> {
     return this.http.delete(`${this.baseUrl}/clubs/${id}`);
   }
+addClub (id: bigint, club:Club): Observable<any> {
+  return this.http.post(`${this.baseUrl}/books/${id}/clubs`,club);
+}
 }
