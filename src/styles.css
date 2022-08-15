@@ -6,11 +6,10 @@
     background-color: cornflowerblue;
 }
 
-h2{
+h2, h3{
   font-family: 'Merriweather', serif;
 }
 
 h5, p, li, a, span{
-  /*font-family: 'Merriweather', serif;*/
   font-family: 'Montserrat', sans-serif;
 }
