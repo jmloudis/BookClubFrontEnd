@@ -11,30 +11,38 @@ import { ClubService } from '../service/club.service';
   styleUrls: ['./add-club.component.css']
 })
 export class AddClubComponent implements OnInit {
-club:Club=new Club();
-book!:Book[];
-b_id!:bigint;
-
-
-
+  club:Club=new Club();
+  book!:Book[];
+  b_id!:bigint;
 
   constructor(private bookService: BookService, private clubService: ClubService, private router:Router) { }
 
   ngOnInit(): void {
     this.bookService.getAllBooks().subscribe(data=>{
       this.book=data;
+
+      // Set id of book to first book id in Array
+      this.b_id = this.book[0].id;
       console.log(this.book);
+      console.log(this.b_id);
     })
   }
-onSubmit(){
-this.clubService.addClub(this.b_id,this.club).subscribe(data =>{
-  console.log(this.club);
-  this.router.navigate(["all-clubs"]);
-})
-}
-selectChange() {
-  console.log(this.b_id);
-}
+
+  onSubmit(){
+  this.clubService.addClub(this.b_id,this.club).subscribe(data =>{
+    console.log(this.club);
+    this.router.navigate(["all-clubs"]);
+  })
+  }
+
+  selectChange() {
+    console.log(this.b_id);
+  }
 
 
+  goToClubsList()
+  {
+    this.router.navigate(["all-clubs"]);
+
+  }
 }
