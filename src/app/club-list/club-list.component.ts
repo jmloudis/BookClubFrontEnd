@@ -28,6 +28,8 @@ export class ClubListComponent implements OnInit
     });
   }
 
+
+
   onSubmit(id: bigint) {
     this.router.navigate(['update-club', id]);
   }
@@ -39,8 +41,6 @@ export class ClubListComponent implements OnInit
             this.book= data;
             console.log(this.book);
           });
-      }
-    )
-
+      })
   }
 }

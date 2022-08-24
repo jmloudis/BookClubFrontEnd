@@ -8,7 +8,10 @@ import {Club} from "../models/club";
 })
 export class ClubService {
 
-  private baseUrl: string = "http://localhost:8080/api/v1";
+  // Change localhost - for AWS
+  private baseUrl: string = "http://localhost:5000/api/v1";
+
+
 
   constructor(private http: HttpClient) { }
 

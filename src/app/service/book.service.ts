@@ -31,7 +31,7 @@ export class BookService {
   }
 
   deleteBook(id: bigint): Observable<any> {
-    return this.http.delete("http://localhost:8080/api/v1/books/" + id);
+    return this.http.delete(`${this.baseUrl}/books/${id}`);
   }
 
 
